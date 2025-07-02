@@ -1,5 +1,8 @@
 ## Hi there 👋
 
+
+[![My Skills](https://skillicons.dev/icons?i=java,spring,postgres,aws,docker,redis,mysql,git,github,js,ts,nodejs,react)](https://skillicons.dev)
+
 <!--
 **sumeetg13/sumeetg13** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
