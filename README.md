@@ -1,7 +1,12 @@
-## Hi there 👋
+# Hi 👋
+## I am Sumeet Gupta 
+Software Engineer | IIT Kanpur | 2023
 
 
-[![My Skills](https://skillicons.dev/icons?i=java,spring,postgres,aws,docker,redis,mysql,git,github,js,ts,nodejs,react)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=java,spring,postgres,aws,docker,redis,mysql,git,github,js,nodejs,react)](https://skillicons.dev)
+
+Contact :
++91 7985220470 | sumeet13gupta@gmail.com 
 
 <!--
 **sumeetg13/sumeetg13** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
