@@ -3,7 +3,7 @@
 Software Engineer | IIT Kanpur | 2023
 
 
-[![My Skills](https://skillicons.dev/icons?i=java,spring,postgres,aws,docker,redis,mysql,git,github,js,nodejs,react)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=java,spring,postgres,mongodb,aws,docker,redis,mysql,git,github,js,nodejs,react)](https://skillicons.dev)
 
 Contact :
 +91 7985220470 | sumeet13gupta@gmail.com 
