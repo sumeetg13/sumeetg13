@@ -1,6 +1,7 @@
 # Hi 👋
 ## I am Sumeet Gupta 
 Software Engineer | IIT Kanpur | 2023
+Building something great !!!
 
 
 [![My Skills](https://skillicons.dev/icons?i=java,spring,postgres,mongodb,aws,docker,redis,mysql,git,github,js,nodejs,react)](https://skillicons.dev)
