@@ -7,12 +7,13 @@ Software Engineer passionate about designing scalable processes, robust architec
 
 Lets Build something great!!!
 
-
 [![My Skills](https://skillicons.dev/icons?i=java,spring,postgres,mongodb,aws,docker,redis,mysql,git,github,js,nodejs,react)](https://skillicons.dev)
 
 Contact :
 +91 7985220470 | sumeet13gupta@gmail.com 
-
+<p align="center">
+  <img src="abc.gif" width="100%" alt="Centered GIF">
+</p>
 <!--
 **sumeetg13/sumeetg13** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
