@@ -1,8 +1,11 @@
 # Hi 👋
 ## I am Sumeet Gupta 
-Software Engineer | IIT Kanpur | 2023
+Software Engineer | IIT Kanpur | 2023 
 
-Building something great !!!
+Software Engineer passionate about designing scalable processes, robust architectures, and high-performance systems. Experienced with Java, Node.js, Python, Camunda, AWS, and React, with strong interests in financial engineering, risk management, derivative modeling, algorithmic trading, stock market analysis, and game development.
+
+
+Lets Build something great!!!
 
 
 [![My Skills](https://skillicons.dev/icons?i=java,spring,postgres,mongodb,aws,docker,redis,mysql,git,github,js,nodejs,react)](https://skillicons.dev)
