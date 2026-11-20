@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 74" width="640" height="74" role="img" aria-label="The Gardener">
+<style>
+text{font-family:'Segoe UI',-apple-system,'Helvetica Neue',Arial,'Hiragino Sans','Noto Sans JP',sans-serif}
+.r{animation:rot 12s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes rot{to{transform:rotate(360deg)}}
+.g{animation:g 2.6s ease-in-out infinite alternate}
+@keyframes g{from{opacity:.35}to{opacity:1}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<circle cx="37" cy="37" r="31" fill="#f48fb1" opacity=".16"/>
+<g transform="translate(37,37) scale(1.25)"><g class="r" fill="#f8a1be" style="animation-delay:-0s"><path d="M0,10 C-6,6 -7,-3 -3,-8 L0,-5 L3,-8 C7,-3 6,6 0,10 Z" transform="rotate(0) translate(0,-10)"/><path d="M0,10 C-6,6 -7,-3 -3,-8 L0,-5 L3,-8 C7,-3 6,6 0,10 Z" transform="rotate(72) translate(0,-10)"/><path d="M0,10 C-6,6 -7,-3 -3,-8 L0,-5 L3,-8 C7,-3 6,6 0,10 Z" transform="rotate(144) translate(0,-10)"/><path d="M0,10 C-6,6 -7,-3 -3,-8 L0,-5 L3,-8 C7,-3 6,6 0,10 Z" transform="rotate(216) translate(0,-10)"/><path d="M0,10 C-6,6 -7,-3 -3,-8 L0,-5 L3,-8 C7,-3 6,6 0,10 Z" transform="rotate(288) translate(0,-10)"/></g></g>
+<text x="37" y="45" text-anchor="middle" font-size="22" font-weight="700" fill="#8e1946">壱</text>
+<text x="84" y="36" font-size="27" font-weight="700" fill="#e75480">The Gardener</text>
+<text x="85" y="60" font-size="14" fill="#c2789a" letter-spacing="1.5">who tends this place  <tspan class="g">· tap to unfold ✿</tspan></text>
+</svg>
