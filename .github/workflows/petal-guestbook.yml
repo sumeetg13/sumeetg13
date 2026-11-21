@@ -1,0 +1,41 @@
+name: petal guestbook
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: readme-writer
+  cancel-in-progress: false
+
+jobs:
+  petal:
+    if: startsWith(github.event.issue.title, '🌸')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add the visitor's petal
+        env:
+          LOGIN: ${{ github.event.issue.user.login }}
+        run: python3 scripts/petal.py "$LOGIN"
+      - name: Commit
+        env:
+          LOGIN: ${{ github.event.issue.user.login }}
+        run: |
+          git config user.name "sakura-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git diff --quiet && exit 0
+          git commit -am "🌸 a petal from @$LOGIN"
+          git pull --rebase && git push
+      - name: Thank and close
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh issue comment "$NUMBER" --repo "$GITHUB_REPOSITORY" --body "ありがとう! Your petal now blooms on the wall 🌸 → https://github.com/${GITHUB_REPOSITORY_OWNER}"
+          gh issue close "$NUMBER" --repo "$GITHUB_REPOSITORY"
