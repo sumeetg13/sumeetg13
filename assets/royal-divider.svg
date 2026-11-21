@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 40" width="1000" height="40" role="img" aria-label="gold divider">
+<style>
+text{font-family:'Cinzel','Trajan Pro','Cormorant Garamond','Playfair Display',Didot,'Bodoni 72',Georgia,'Times New Roman',serif}
+.spin{transform-box:fill-box;transform-origin:center;animation:spin 60s linear infinite}
+.spin-r{transform-box:fill-box;transform-origin:center;animation:spin 90s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.breathe{animation:breathe 4.5s ease-in-out infinite alternate}
+@keyframes breathe{from{opacity:.55}to{opacity:1}}
+.glint{animation:glint linear infinite}
+@keyframes glint{0%{stroke-dashoffset:1000}100%{stroke-dashoffset:-1000}}
+.dust{animation:dust linear infinite}
+@keyframes dust{0%{transform:translateY(0);opacity:0}20%{opacity:.9}100%{transform:translateY(-120px);opacity:0}}
+.draw{animation:draw 2.4s cubic-bezier(.3,.7,.2,1) both}
+@keyframes draw{from{stroke-dashoffset:var(--len)}to{stroke-dashoffset:0}}
+.rise{animation:rise .9s ease-out both}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<defs>
+<linearGradient id="gold-d" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#8a6a1f"/><stop offset=".28" stop-color="#d4af37"/>
+  <stop offset=".5" stop-color="#f9e08b"/><stop offset=".72" stop-color="#d4af37"/>
+  <stop offset="1" stop-color="#6e4f12"/>
+</linearGradient>
+<linearGradient id="goldl-d" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1000" y2="400">
+  <stop offset="0" stop-color="#8a6a1f"/><stop offset=".25" stop-color="#d4af37"/>
+  <stop offset=".5" stop-color="#f9e08b"/><stop offset=".75" stop-color="#d4af37"/>
+  <stop offset="1" stop-color="#8a6a1f"/>
+</linearGradient>
+<linearGradient id="goldv-d" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#f9e08b"/><stop offset=".45" stop-color="#d4af37"/>
+  <stop offset=".55" stop-color="#8a6a1f"/><stop offset="1" stop-color="#d4af37"/>
+</linearGradient>
+<linearGradient id="shine-d" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#fff8dc" stop-opacity="0"/>
+  <stop offset=".5" stop-color="#fff8dc" stop-opacity=".85"/>
+  <stop offset="1" stop-color="#fff8dc" stop-opacity="0"/>
+</linearGradient>
+<filter id="glow-d" x="-50%" y="-50%" width="200%" height="200%">
+  <feGaussianBlur stdDeviation="3" result="b"/>
+  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+<filter id="bloom-d" x="-50%" y="-50%" width="200%" height="200%">
+  <feGaussianBlur stdDeviation="9"/>
+</filter>
+<filter id="grain-d" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency=".95" numOctaves="2" seed="4" result="n"/>
+  <feColorMatrix in="n" type="matrix" values="0 0 0 0 .83  0 0 0 0 .68  0 0 0 0 .22  0 0 0 1.6 -.85" result="g"/>
+  <feComposite in="g" in2="SourceGraphic" operator="in"/>
+</filter>
+<filter id="marble-d" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="turbulence" baseFrequency=".004 .011" numOctaves="5" seed="11" result="t"/>
+  <feColorMatrix in="t" type="luminanceToAlpha" result="a"/>
+  <feComponentTransfer in="a" result="v"><feFuncA type="table" tableValues="0 0 0 0 0 0 .95 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"/></feComponentTransfer>
+  <feFlood flood-color="#d4af37" flood-opacity=".55"/>
+  <feComposite in2="v" operator="in" result="veins"/>
+  <feComposite in="veins" in2="SourceGraphic" operator="in"/>
+</filter>
+<linearGradient id="fadeL-d" gradientUnits="userSpaceOnUse" x1="80" x2="468"><stop offset="0" stop-color="#d4af37" stop-opacity="0"/><stop offset="1" stop-color="#d4af37"/></linearGradient>
+<linearGradient id="fadeR-d" gradientUnits="userSpaceOnUse" x1="532" x2="920"><stop offset="0" stop-color="#d4af37"/><stop offset="1" stop-color="#d4af37" stop-opacity="0"/></linearGradient></defs>
+
+<path d="M80,20H468" stroke="url(#fadeL-d)" stroke-width="1.3"/>
+<path d="M532,20H920" stroke="url(#fadeR-d)" stroke-width="1.3"/>
+<path class="glint" d="M80,20H920" pathLength="1000" stroke="#fff4c4" stroke-width="2" stroke-dasharray="60 1940" style="animation-duration:6s" filter="url(#glow-d)"/>
+<g filter="url(#glow-d)"><path d="M500,6 l14,14 l-14,14 l-14,-14Z" fill="url(#gold-d)" class="breathe"/></g>
+<path d="M500,12 l8,8 l-8,8 l-8,-8Z" fill="#050505"/>
+<circle cx="500" cy="20" r="2.4" fill="#f9e08b"/>
+<path d="M476,20 l-6,-5 l-6,5 l6,5Z M524,20 l6,-5 l6,5 l-6,5Z" fill="#d4af37"/>
+
+</svg>

@@ -1,0 +1,37 @@
+name: Royal ledger
+
+on:
+  schedule:
+    - cron: "17 3 * * *"   # daily, 03:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: royal-ledger
+  cancel-in-progress: true
+
+jobs:
+  ledger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Render ledger and calendar
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/royal_stats.py ${{ github.repository_owner }}
+
+      - name: Commit if the numbers moved
+        run: |
+          git config user.name  "royal-scribe[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/royal-ledger.svg assets/royal-calendar.svg
+          git diff --cached --quiet && { echo "ledger unchanged"; exit 0; }
+          git commit -m "Update the royal ledger"
+          git push
